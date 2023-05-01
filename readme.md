@@ -36,7 +36,8 @@ git clone https://github.com/Phammanh26/vietai-mailer
     PASSWORD_SENDER='password123'
     HOST='0.0.0.0'
     PORT=8000
-    Save the .env file. The environment variables will be automatically loaded when you start your application using Docker Compose.
+    
+  Save the .env file. The environment variables will be automatically loaded when you start your application using Docker Compose.
 
 
 
