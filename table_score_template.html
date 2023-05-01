@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Email Table Template</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-eKfsxtsTZeT/RyNofRnvc/8n/Jazs45qzDxQXHzy40YBmQeyFt4AVy4d4yJ+OCbFwm7LvSDxSxqbzXZS1KT+MA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style>
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+		th, td {
+			text-align: left;
+			padding: 8px;
+			border-bottom: 1px solid #ddd;
+		}
+		th {
+			background-color: #f2f2f2;
+		}
+		tr:hover {
+			background-color: #f5f5f5;
+		}
+		header {
+			padding: 20px;
+			background-color: #f2f2f2;
+			text-align: center;
+		}
+		header img {
+			max-height: 80px;
+		}
+		section {
+			padding: 20px;
+		}
+		footer {
+			padding: 10px;
+			background-color: #f2f2f2;
+			text-align: center;
+		}
+		footer a {
+			color: #333;
+			text-decoration: none;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<img src="https://i.imgur.com/xB48KkT.png" alt="img">
+	</header>
+	<section>
+		<h1>Thông báo xếp hạng</h1>
+		<p>Chào <STUDENT_NAME>, hiện tại bạn đang xếp hạng thứ <RANKING_ORDER> trên bảng xếp hạng với điểm số là <SCORE_RANKING> </p>
+	</section>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Xếp hạng</th>
+				<th>Học viên</th>
+				<th>Điểm</th>
+			</tr>
+		</thead>
+		<tbody>
+			<ROW_RANKING_SCORE>
+		</tbody>
+	</table>
+
+  <section>
+		<h1>Làm bài tập thôi nào!</h1>
+		<p> Nếu bạn chưa hoàn thành assigment, vui lòng làm bài tập <a href ='https://course.vietai.org/manage/courses/2206638'> tại đây </a> </p>
+	</section>
+
+  <section>
+		<h1>Liên hệ</h1>
+		<p> Trong quá trình làm bài tập, hoặc có bất kỳ vấn đề gì liên quan đến assigment có thể email trực tiếp tới đội ngũ VietAI tại:</p>
+    <p>Email: Contact@vietai.org</p>
+	</section>

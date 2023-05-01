@@ -1,0 +1,27 @@
+# Project Title
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Introduction
+
+A brief introduction to the project and its purpose.
+
+## Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [License](#license)
+
+## Installation
+
+1. Clone this repository to your local machine.
+git clone 
+
+2. Config env on conf/dev/.env
+
+2. Build docker
+docker compose up
+
+3. Access url: http://0.0.0.0:8000

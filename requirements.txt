@@ -1,0 +1,6 @@
+fastapi
+pandas
+fastapi
+uvicorn
+python-dotenv
+python-multipart
