@@ -30,6 +30,7 @@ git clone https://github.com/Phammanh26/vietai-mailer
   **PORT** - The port number that the application is running on.
   
   **Here's an example of how you can define these variables in the .env file**:
+  
     SUBJECT='VIETAI | BÁO CÁO XẾP HẠNG HÀNG TUẦN'
     EMAIL_SENDER='example@example.com'
     PASSWORD_SENDER='password123'
