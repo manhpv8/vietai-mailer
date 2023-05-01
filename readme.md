@@ -7,12 +7,10 @@ A brief introduction to the project and its purpose.
 
 ## Table of Contents
 
-
-
 ## Installation
 
 1. Clone this repository to your local machine.
-git clone https://github.com/Phammanh26/vietai-mailer
+```git clone https://github.com/Phammanh26/vietai-mailer```
 2. Configuring environment variables in conf/dev/.env
   - Navigate to the conf/dev directory in your project.
   - Create a new file named .env.
@@ -40,13 +38,7 @@ git clone https://github.com/Phammanh26/vietai-mailer
   Save the .env file. The environment variables will be automatically loaded when you start your application using Docker Compose.
 
 
-
-
-
-
-
-
 3. Build docker
-docker compose up
+```docker compose up```
 
 4. Access url: http://0.0.0.0:8000
