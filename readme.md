@@ -33,10 +33,12 @@ A brief introduction to the project and its purpose.
       HOST='0.0.0.0'
       PORT=8000
    ```
+   
  + Save the .env file. The environment variables will be automatically loaded when you start your application using Docker Compose.
 
 
 3. Build docker
+
 ```docker compose up```
 
-4. Access url: http://0.0.0.0:8000
+4. Access url: ```http://0.0.0.0:8000```
