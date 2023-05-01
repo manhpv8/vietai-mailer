@@ -31,8 +31,7 @@ A brief introduction to the project and its purpose.
       EMAIL_SENDER='example@example.com'
       PASSWORD_SENDER='password123'
       HOST='0.0.0.0'
-      PORT=8000
-   ```
+      PORT=8000 ```
    
  + Save the .env file. The environment variables will be automatically loaded when you start your application using Docker Compose.
 
