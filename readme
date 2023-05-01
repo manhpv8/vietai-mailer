@@ -1,6 +1,5 @@
 # Project Title
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Introduction
 
@@ -8,16 +7,12 @@ A brief introduction to the project and its purpose.
 
 ## Table of Contents
 
-* [Installation](#installation)
-* [Usage](#usage)
-* [Contributing](#contributing)
-* [Tests](#tests)
-* [License](#license)
+
 
 ## Installation
 
 1. Clone this repository to your local machine.
-git clone 
+git clone https://github.com/Phammanh26/vietai-maile
 
 2. Config env on conf/dev/.env
 
