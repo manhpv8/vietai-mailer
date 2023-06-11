@@ -13,15 +13,15 @@ import config
 
 logger = get_logger()
 
-def send_email(to_email: str, content_html: str):
+def send_email(subject, to_email: str, html_content: str):
     # Create message container - the correct MIME type is multipart/alternative.
     msg = MIMEMultipart('alternative')
-    msg['Subject'] = config.email_sender
+    msg['Subject'] = subject 
     msg['From'] = config.email_sender
     msg['To'] = to_email
 
     # Record the MIME types of both parts - text/plain and text/html.
-    part2 = MIMEText(content_html, 'html')
+    part2 = MIMEText(html_content, 'html')
 
     # Attach parts into message container.
     # According to RFC 2046, the last part of a multipart message, in this case
@@ -42,27 +42,17 @@ def send_email(to_email: str, content_html: str):
     return True, ""
         
 
-def send_multiple_emails(template_location_path: str, data_df: pd.DataFrame):
+def send_multiple_emails( subject, data_df: pd.DataFrame):
     results = []
-    tabel_ranking_template_html = read_html_template(location_path=template_location_path)
     for row in data_df.itertuples():
         curr_email = row.email
-        content_html = generate_content_ranking_html(
-            data_df = data_df,
-            curr_email = curr_email,
-            template_html = tabel_ranking_template_html
-        )
-
-        if content_html == None:
-            results.append(f"{curr_email} Failed, Reason: content_html == None")        
-        
+    
+        html_content = row.html_content
+        status, message = send_email(subject, to_email = curr_email, html_content= html_content)
+        if status == False:
+            results.append(f"{curr_email} Failed, Reason: {message}")
         else:
-            # send email
-            status, message = send_email(to_email = curr_email, content_html= content_html)
-            if status == False:
-                results.append(f"{curr_email} Failed, Reason: {message}")
-            else:
-                results.append(f"{curr_email} Successed!!!")
+            results.append(f"{curr_email} Successed!!!")
     return results
 
 
