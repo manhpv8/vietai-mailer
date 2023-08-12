@@ -7,8 +7,7 @@ from src.utils.score_table import generate_content_ranking_html
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import pandas as pd
-
-import config
+import os
 
 
 logger = get_logger()
@@ -17,7 +16,7 @@ def send_email(subject, to_email: str, html_content: str):
     # Create message container - the correct MIME type is multipart/alternative.
     msg = MIMEMultipart('alternative')
     msg['Subject'] = subject 
-    msg['From'] = config.email_sender
+    msg['From'] = os.getenv("EMAIL_SENDER")
     msg['To'] = to_email
 
     # Record the MIME types of both parts - text/plain and text/html.
@@ -30,7 +29,7 @@ def send_email(subject, to_email: str, html_content: str):
     try:
         smtp_server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
         smtp_server.ehlo()
-        smtp_server.login(config.email_sender, config.password_sender)
+        smtp_server.login( os.getenv("EMAIL_SENDER"),  os.getenv("PASSWORD_SENDER"))
         smtp_server.sendmail(msg['From'], msg['To'], msg.as_string())
         smtp_server.close()
         logger.warn(f"Send to email {to_email} Successfuly!!!")

@@ -11,4 +11,4 @@ sudo kill -9 $PID
 fi
 
 # Start your FastAPI application
-uvicorn app:app --host=$HOST --port=$PORT
+uvicorn app:app --host=$HOST --port=$PORT --reload
